@@ -6,3 +6,10 @@ Our work proposes a novel data augmentation model, ASDA, which mines latent feat
 The analysis of social media public opinion relies on large-scale data, but is commonly constrained by data sparsity. To address this challenge, recent studies have attempted data augmentation by editing or imitating the direct expression of existing labeled samples to generate new samples, inherently ignoring the latent features.
 Therefore, we propose the Adversarial Sensing-Driven Augmentation (ASDA) model for public opinion data augmentation by mining latent features shared among all data with the same label. First, we propose an adversarial agents framework where a generator and a discriminator iteratively mine and assess latent features to achieve effective refinement and selection, even under low-resource supervision. Second, we produce adaptive and interpretable auxiliary embeddings based on latent feature vectors, leveraging the direct correspondence of each dimension with a human-readable trait to enhance downstream task performance. Lastly, we leverage latent features to augment existing unlabeled real data.
 Experiments highlight the effectiveness of ASDA, demonstrating an average performance increase of 6.44\% over existing studies and 9.43\% over the low-scale dataset, while achieving 95\% of the accuracy of downstream models trained on the real large-scale dataset in classification tasks.
+
+### Datasets
+The datasets are located in the `data/` directory. We used two main datasets to validate our model's robustness:
+SMS Spam Detection: An English dataset with over 5,500 messages labeled as `ham` or `spam`.
+Troll Detection: A low-resource Chinese dataset of 50 labeled tweets.
+
+Note: The core code for ASDA is made public here. The full codebase will be provided once the paper is accepted.
